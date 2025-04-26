@@ -1,4 +1,5 @@
 ```python
+#After conducting the LDA analysis, use joblib to save the model so if you need to restart kernel, you don't need to recreate everything.
 import joblib
 
 # Load the objects
