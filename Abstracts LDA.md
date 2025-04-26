@@ -30,7 +30,6 @@ nltk.download('stopwords')
 ```
 
     [nltk_data] Downloading package stopwords to
-    [nltk_data]     C:\Users\sahluwal\AppData\Roaming\nltk_data...
     [nltk_data]   Package stopwords is already up-to-date!
     
 
