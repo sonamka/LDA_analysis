@@ -998,9 +998,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 }
 </style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearchCV(estimator=LatentDirichletAllocation(),
              param_grid={&#x27;learning_decay&#x27;: [0.5, 0.7, 0.9],
-                         &#x27;n_components&#x27;: [5, 8, 12, 16]})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;GridSearchCV<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.model_selection.GridSearchCV.html">?<span>Documentation for GridSearchCV</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>GridSearchCV(estimator=LatentDirichletAllocation(),
-             param_grid={&#x27;learning_decay&#x27;: [0.5, 0.7, 0.9],
-                         &#x27;n_components&#x27;: [5, 8, 12, 16]})</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">best_estimator_: LatentDirichletAllocation</label><div class="sk-toggleable__content fitted"><pre>LatentDirichletAllocation(learning_decay=0.9, n_components=5)</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;LatentDirichletAllocation<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html">?<span>Documentation for LatentDirichletAllocation</span></a></label><div class="sk-toggleable__content fitted"><pre>LatentDirichletAllocation(learning_decay=0.9, n_components=5)</pre></div> </div></div></div></div></div></div></div></div></div>
+                         &#x27;n_components&#x27;: [5, 8, 12, 16]})
 
 
 
@@ -1402,5 +1400,10 @@ df_topic_keywords
 
 
 ```python
+import joblib
 
+# Save the necessary components
+joblib.dump(best_lda_model, 'lda_model.pkl') 
+joblib.dump(new_matrix, 'new_matrix.pkl')    
+joblib.dump(vectorizer, 'vectorizer.pkl')    
 ```
